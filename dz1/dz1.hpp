@@ -1,55 +1,59 @@
-#ifndef dz1
-#define dz1
+#ifndef DZ
+#define DZ
 
 #include<stdexcept>
 
-template<unsigned N = 10>
+template <unsigned N = 10>
 class Vector {
 private:
     int* t;
     unsigned size;
     unsigned capacity;
 public:
-    Vector() : t(nullptr), size(0), capacity(N){
+    Vector() : t(nullptr),
+               size(0),
+               capacity(N) {
         t = new int[N];
     }
-    void add(int value){
-        if(capacity == size){
-            capacity *=2;
-            int *p = new int[capacity];
-            for(unsigned i=0; i<size;++i){
+    void add(int value) {
+        if (capacity == size) {
+            capacity *= 2;
+            int* p = new int[capacity];
+            for(unsigned i = 0; i < size; ++i) {
                 p[i]=t[i];
             }
             delete[] t;
-            t=p;
+            t = p;
         }
         t[size] = value;
         size++;
     }
-    void pop(){
+    void pop() {
         --size;
-        if(capacity>2*size){
+        if (capacity> 2 * size) {
             capacity = size;
-            int *p = new int[capacity];
-            for(unsigned i=0;i<size;++i){
-                p[i]=t[i];
+            int* p = new int[capacity];
+            for(unsigned i = 0;i < size; ++i) {
+                p[i] = t[i];
             }
             delete[] t;
-            t=p;
+            t = p;
         }
     }
 
-    Vector(const Vector& other) : t(new int[other.size]),size(other.size),capacity(other.size){...}
+    Vector(const Vector& other) : t(new int[other.size]),
+                                  size(other.size),
+                                  capacity(other.size){...}
 
-    Vector& operator= (const Vector& other){
-        if(this == &other){
+    Vector& operator= (const Vector& other) {
+        if (this == &other) {
             return *this;
         }
         delete[] t;
         size = other.size;
         capacity = other.size;
         t = new int[size];
-        for(unsigned i=0;i<size;++i){
+        for(unsigned i = 0;i < size; ++i) {
             t[i] = other.t[i];
         }
         return *this;
@@ -60,16 +64,15 @@ public:
     }
 
     int& operator[](unsigned i){
-        if(i>=size){
+        if(i >= size){
             throw std::runtime_error("error");
         }
         return t[i];
     }
 
-    ~Vector(){
+    ~Vector() {
         delete[] t;
     }
-
 };
 
-#endif // dz1
+#endif // DZ
