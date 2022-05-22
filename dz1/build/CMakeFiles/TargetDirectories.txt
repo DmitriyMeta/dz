@@ -1,0 +1,3 @@
+C:/Users/dimap/OneDrive/Рабочий стол/c-template-v2-master/dz1/build/CMakeFiles/dz1.dir
+C:/Users/dimap/OneDrive/Рабочий стол/c-template-v2-master/dz1/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/dimap/OneDrive/Рабочий стол/c-template-v2-master/dz1/build/CMakeFiles/ZERO_CHECK.dir

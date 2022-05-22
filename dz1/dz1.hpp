@@ -11,9 +11,9 @@ private:
     unsigned capacity;
 public:
     Vector() : t(nullptr), size(0), capacity(N){
-        m = new int[N];
+        t = new int[N];
     }
-    void add(int v){
+    void add(int value){
         if(capacity == size){
             capacity *=2;
             int *p = new int[capacity];
@@ -32,7 +32,7 @@ public:
             capacity = size;
             int *p = new int[capacity];
             for(unsigned i=0;i<size;++i){
-                p[i]=t[i]
+                p[i]=t[i];
             }
             delete[] t;
             t=p;
