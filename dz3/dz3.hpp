@@ -3,22 +3,22 @@
 
 #include<stdexcept>
 
-template <unsigned N = 10>
+template <class T,unsigned N = 10>
 class Vector {
 private:
-    int* t;
+    T* t;
     unsigned size;
     unsigned capacity;
 public:
     Vector() : t(nullptr),
                size(0),
                capacity(N) {
-        t = new int[N];
+        t = new T[N];
     }
-    void add(int value) {
+    void add(T& value) {
         if (capacity == size) {
             capacity *= 2;
-            int* p = new int[capacity];
+            T* p = new T[capacity];
             for(unsigned i = 0; i < size; ++i) {
                 p[i]=t[i];
             }
@@ -32,7 +32,7 @@ public:
         --size;
         if (capacity> 2 * size) {
             capacity = size;
-            int* p = new int[capacity];
+            T* p = new T[capacity];
             for(unsigned i = 0;i < size; ++i) {
                 p[i] = t[i];
             }
@@ -41,7 +41,7 @@ public:
         }
     }
 
-    Vector(const Vector& other) : t(new int[other.size]),
+    Vector(const Vector& other) : t(new T[other.size]),
                                   size(other.size),
                                   capacity(other.size){...}
 
@@ -52,7 +52,7 @@ public:
         delete[] t;
         size = other.size;
         capacity = other.size;
-        t = new int[size];
+        t = new T[size];
         for(unsigned i = 0;i < size; ++i) {
             t[i] = other.t[i];
         }
@@ -70,17 +70,17 @@ public:
         return t[i];
     }
 
-    int *begin () {
+    T *begin () {
         return t;
     }
 
-    int* end () {
+    T* end () {
         return t + size;
     }
 
-    Vector(int* begin, int* end): t(nullptr), size(0), capacity(N) {
-        t = new int[N];
-        for(auto i = begin; i != end; i++) {
+    Vector(T* begin, T* end): t(nullptr), size(0), capacity(N) {
+        t = new T[N];
+        for(auto i = begin; i != end; ++i) {
             add(*i);
         }
     }
