@@ -1,0 +1,1 @@
+add_executable(dz2 main.cpp)

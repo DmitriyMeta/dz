@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\dimap\OneDrive\Рабочий стол\c-template-v2-master\dz2\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\dimap\OneDrive\Рабочий стол\c-template-v2-master\dz2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0CE07D83-DAF6-39F6-8728-293AE8BBEB63}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
