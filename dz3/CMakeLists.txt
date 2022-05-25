@@ -1,1 +1,0 @@
-add_executable(dz3 main.cpp)

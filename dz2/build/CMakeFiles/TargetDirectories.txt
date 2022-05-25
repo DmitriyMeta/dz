@@ -1,3 +1,0 @@
-C:/Users/dimap/OneDrive/Рабочий стол/c-template-v2-master/dz2/build/CMakeFiles/dz2.dir
-C:/Users/dimap/OneDrive/Рабочий стол/c-template-v2-master/dz2/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/dimap/OneDrive/Рабочий стол/c-template-v2-master/dz2/build/CMakeFiles/ZERO_CHECK.dir
